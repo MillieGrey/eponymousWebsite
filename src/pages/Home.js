@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 //import AnimLogo from "../components/AnimLogo";
 import { Container } from "react-bootstrap";
 import ProfileTile from "../components/ProfileTile";
