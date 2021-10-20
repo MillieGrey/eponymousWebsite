@@ -139,13 +139,13 @@ const tileProfilePic = {
 };
 
 /// TEMPLATE DATA OBJECT
-const TEMP_PROFILE_DATA = {
-  login: "Pandaphobic",
-  avatar_url: "https://avatars.githubusercontent.com/u/11794877?v=4",
-  html_url: "https://github.com/Pandaphobic",
-  name: "Christopher Steffes",
-  bio: "Beginner Programmer & Electronics Hobbyist",
-};
+// const TEMP_PROFILE_DATA = {
+//   login: "Pandaphobic",
+//   avatar_url: "https://avatars.githubusercontent.com/u/11794877?v=4",
+//   html_url: "https://github.com/Pandaphobic",
+//   name: "Christopher Steffes",
+//   bio: "Beginner Programmer & Electronics Hobbyist",
+// };
 
 export default function ProfileTile(props) {
   const groupData = props.profile;

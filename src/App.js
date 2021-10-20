@@ -1,11 +1,11 @@
 import "./App.css";
 import Home from "./pages/Home";
-import About from "./pages/About";
+//import About from "./pages/About";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Footer from "./components/Navbar";
-import Contact from "./pages/Contact";
+//import Contact from "./pages/Contact";
 import PageNotFound from "./pages/PageNotFound";
-import { Container } from "react-bootstrap";
+//import { Container } from "react-bootstrap";
 
 function App() {
   return (
