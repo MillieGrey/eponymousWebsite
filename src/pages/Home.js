@@ -1,6 +1,6 @@
 import React from "react";
-import AnimLogo from "../components/AnimLogo";
-import { Container, Jumbotron } from "react-bootstrap";
+//import AnimLogo from "../components/AnimLogo";
+import { Container } from "react-bootstrap";
 
 const style = {
   position: "relative",
