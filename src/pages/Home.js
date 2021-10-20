@@ -2,7 +2,7 @@ import React from "react";
 //import AnimLogo from "../components/AnimLogo";
 import { Container } from "react-bootstrap";
 import ProfileTile from "../components/ProfileTile";
-import Background1 from "../assets/mills-untitled shoot-615-211019.jpg";
+import Background1 from "../assets/mills-untitled-shoot-615-211019.jpg";
 
 const style = {
   position: "relative",
