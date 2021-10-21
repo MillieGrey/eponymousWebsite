@@ -3,6 +3,7 @@ import Nav from "react-bootstrap/Nav";
 import { RiTwitterLine } from "react-icons/ri";
 import { RiGithubLine } from "react-icons/ri";
 import { RiDiscordLine } from "react-icons/ri";
+import { RiInstagramLine } from "react-icons/ri";
 import { Link } from "react-router-dom";
 
 const footerStyle = {
