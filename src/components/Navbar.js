@@ -59,55 +59,34 @@ const navLinkTextStyle = {
 
 export default function Footer() {
   return (
-    <Nav className="justify-content-center" style={footerStyle}>
+    <Nav className='justify-content-center' style={footerStyle}>
       <div style={navLinksWrapperInvisible}></div>
 
-      <Nav.Link href="/home" as={Link} to="/home" style={navLinkTextStyle}>
+      <Nav.Link href='/home' as={Link} to='/home' style={navLinkTextStyle}>
         Millie Grey
       </Nav.Link>
 
       <p style={navLinkTextStyle}> | </p>
 
-      <Nav.Link href="" style={navLinkTextStyle}>
+      <Nav.Link href='' style={navLinkTextStyle}>
         Gallery
       </Nav.Link>
 
-      <Nav.Link href="/about" as={Link} to="/about" style={navLinkTextStyle}>
+      <Nav.Link href='/about' as={Link} to='/about' style={navLinkTextStyle}>
         Flights
       </Nav.Link>
 
-      <Nav.Link
-        href="/contact"
-        as={Link}
-        to="/contact"
-        style={navLinkTextStyle}
-      >
+      <Nav.Link href='/contact' as={Link} to='/contact' style={navLinkTextStyle}>
         Projects
       </Nav.Link>
 
       <div style={navLinksWrapper}>
-        <Nav.Link
-          href="https://github.com/Mid-Heavy"
-          target="blank"
-          style={navLinkStyle}
-        >
+        <Nav.Link href='https://github.com/MillieGrey' target='blank' style={navLinkStyle}>
           <RiGithubLine style={iconStyle} />
         </Nav.Link>
 
-        <Nav.Link
-          href="https://twitter.com/midheavy"
-          target="blank"
-          style={navLinkStyle}
-        >
-          <RiTwitterLine style={iconStyle} />
-        </Nav.Link>
-
-        <Nav.Link
-          href="https://discord.gg/e9mFvZ3W"
-          target="blank"
-          style={navLinkStyle}
-        >
-          <RiDiscordLine style={iconStyle} />
+        <Nav.Link href='//www.instagram.com/milliegreyscale/' target='blank' style={navLinkStyle}>
+          <RiInstagramLine style={iconStyle} />
         </Nav.Link>
       </div>
     </Nav>
