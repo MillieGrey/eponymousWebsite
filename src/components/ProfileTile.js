@@ -8,13 +8,11 @@ const bodyStyle = {
   margin: "0",
   display: "grid",
   gridTemplateColumns: "1fr 1fr 1fr 1fr",
-  gridTemplateRows: "1fr 1fr 1fr auto 14px",
+  gridTemplateRows: "1fr 1fr 1fr auto 10px",
   zIndex: "3",
 };
 
 const iconStyle = {
-  height: "14px",
-  width: "14px",
   color: "white",
   margin: "0",
   marginRight: "2px",
@@ -31,7 +29,6 @@ const tileShadowLeft = {
 };
 
 const tileLoginStyleLeft = {
-  fontSize: "2rem",
   fontWeight: "bold",
   gridColumnStart: "1",
   gridColumnEnd: "span 1",
@@ -43,7 +40,6 @@ const tileLoginStyleLeft = {
 };
 
 const tileNameStyleLeft = {
-  fontSize: "2rem",
   fontWeight: "bold",
   gridColumnStart: "3",
   gridColumnEnd: "span 2",
@@ -59,6 +55,7 @@ const tileBioStyleLeft = {
   gridRowStart: "2",
   gridRowEnd: "span 3",
   textAlign: "right",
+  margin: "0",
 };
 
 const tileLogosStyleLeft = {
@@ -73,8 +70,7 @@ const tileLogosStyleLeft = {
 
 const tileProfilePicLeft = {
   borderRadius: "50%",
-  height: "125px",
-  width: "125px",
+
   gridColumnStart: "1",
   gridColumnEnd: "span 1",
   gridRowStart: "1",
@@ -93,7 +89,6 @@ const tileShadow = {
 };
 
 const tileLoginStyle = {
-  fontSize: "2rem",
   fontWeight: "bold",
   gridColumnStart: "4",
   gridColumnEnd: "span 1",
@@ -105,7 +100,6 @@ const tileLoginStyle = {
 };
 
 const tileNameStyle = {
-  fontSize: "2rem",
   fontWeight: "bold",
   gridColumnStart: "1",
   gridColumnEnd: "span 2",
@@ -121,6 +115,7 @@ const tileBioStyle = {
   gridRowStart: "2",
   gridRowEnd: "span 3",
   textAlign: "left",
+  margin: "0",
 };
 
 const tileLogosStyle = {
@@ -135,8 +130,6 @@ const tileLogosStyle = {
 
 const tileProfilePic = {
   borderRadius: "50%",
-  height: "125px",
-  width: "125px",
   gridColumnStart: "4",
   gridColumnEnd: "span 1",
   gridRowStart: "1",
@@ -162,14 +155,13 @@ export default function ProfileTile(props) {
   if (isLeft) {
     return (
       <Card
+        className='profileTileCardStyle'
         style={{
           fontFamily: "Rajdhani",
           color: "white",
           marginTop: "50px",
           maxWidth: "700px",
-          minWidth: "475px",
           zIndex: "1",
-          height: "300px",
           marginRight: "auto",
           marginLeft: "auto",
           padding: "0",
@@ -181,17 +173,28 @@ export default function ProfileTile(props) {
       >
         <div style={tileShadowLeft}></div>
         <Card.Body style={bodyStyle}>
-          <Card.Title style={tileLoginStyleLeft}>{groupData.login}</Card.Title>
-          <Card.Title style={tileNameStyleLeft}>{groupData.name}</Card.Title>
-          <img style={tileProfilePicLeft} alt='Avatar' src={groupData.avatar_url}></img>
-          <Card.Text style={tileBioStyleLeft}>{groupData.bio}</Card.Text>
-          <div style={tileLogosStyleLeft}>
+          <Card.Title className='profileTileLoginStyle' style={tileLoginStyleLeft}>
+            {groupData.login}
+          </Card.Title>
+          <Card.Title className='profileTileNameStyle' style={tileNameStyleLeft}>
+            {groupData.name}
+          </Card.Title>
+          <img
+            className='profileTileProfilePic'
+            style={tileProfilePicLeft}
+            alt='Avatar'
+            src={groupData.avatar_url}
+          ></img>
+          <Card.Text className='profileTileBioStyle' style={tileBioStyleLeft}>
+            {groupData.bio}
+          </Card.Text>
+          <div className='profileTileLogosStyle' style={tileLogosStyleLeft}>
             <Card.Link href={groupData.html_url} target='blank'>
-              <RiGithubLine style={iconStyle} />
+              <RiGithubLine className='profileTileIconStyle' style={iconStyle} />
             </Card.Link>
             {groupData.twitter_username && (
               <Card.Link href={"https://twitter.com/" + groupData.twitter_username} target='blank'>
-                <RiTwitterLine style={iconStyle} />
+                <RiTwitterLine className='profileTileIconStyle' style={iconStyle} />
               </Card.Link>
             )}
           </div>
@@ -201,14 +204,13 @@ export default function ProfileTile(props) {
   }
   return (
     <Card
+      className='profileTileCardStyle'
       style={{
         fontFamily: "Rajdhani",
         color: "white",
         marginTop: "50px",
         maxWidth: "700px",
-        minWidth: "475px",
         zIndex: "1",
-        height: "300px",
         marginRight: "auto",
         marginLeft: "auto",
         padding: "0",
@@ -220,17 +222,28 @@ export default function ProfileTile(props) {
     >
       <div style={tileShadow}></div>
       <Card.Body style={bodyStyle}>
-        <Card.Title style={tileLoginStyle}>{groupData.login}</Card.Title>
-        <Card.Title style={tileNameStyle}>{groupData.name}</Card.Title>
-        <img style={tileProfilePic} alt='Avatar' src={groupData.avatar_url}></img>
-        <Card.Text style={tileBioStyle}>{groupData.bio}</Card.Text>
-        <div style={tileLogosStyle}>
+        <Card.Title className='profileTileLoginStyle' style={tileLoginStyle}>
+          {groupData.login}
+        </Card.Title>
+        <Card.Title className='profileTileNameStyle' style={tileNameStyle}>
+          {groupData.name}
+        </Card.Title>
+        <img
+          className='profileTileProfilePic'
+          style={tileProfilePic}
+          alt='Avatar'
+          src={groupData.avatar_url}
+        ></img>
+        <Card.Text className='profileTileBioStyle' style={tileBioStyle}>
+          {groupData.bio}
+        </Card.Text>
+        <div className='profileTileLogosStyle' style={tileLogosStyle}>
           <Card.Link href={groupData.html_url} target='blank'>
-            <RiGithubLine style={iconStyle} />
+            <RiGithubLine className='profileTileIconStyle' style={iconStyle} />
           </Card.Link>
           {groupData.twitter_username && (
             <Card.Link href={"https://twitter.com/" + groupData.twitter_username} target='blank'>
-              <RiTwitterLine style={iconStyle} />
+              <RiTwitterLine className='profileTileIconStyle' style={iconStyle} />
             </Card.Link>
           )}
         </div>
