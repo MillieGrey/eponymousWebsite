@@ -16,7 +16,7 @@ function App() {
           <Route exact path={["/home", "/", ""]}>
             <Home />
           </Route>
-          <Route>
+          <Route exact path={"/gallery"}>
             <Gallery />
           </Route>
           <Route exact path={""}>
