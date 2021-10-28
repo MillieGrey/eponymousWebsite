@@ -1,6 +1,6 @@
 import "./App.css";
 import Home from "./pages/Home";
-//import About from "./pages/About";
+import Gallery from "./pages/Gallery";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Footer from "./components/Navbar";
 //import Contact from "./pages/Contact";
@@ -9,12 +9,15 @@ import PageNotFound from "./pages/PageNotFound";
 
 function App() {
   return (
-    <div className="App">
+    <div className='App'>
       <Router>
         <Footer />
         <Switch>
           <Route exact path={["/home", "/", ""]}>
             <Home />
+          </Route>
+          <Route>
+            <Gallery />
           </Route>
           <Route exact path={""}>
             <PageNotFound />
