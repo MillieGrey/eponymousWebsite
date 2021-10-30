@@ -1,48 +1,42 @@
-import React from "react";
-import { Lightbox } from "react-lightbox-pack"; // <--- Importing LightBox Pack
-import "react-lightbox-pack/dist/index.css";
-import data from "../assets/imgData.json"; // <--- Importing Sample JSON Data
+import { useState, useEffect } from "react";
+import { Container } from "react-bootstrap";
+import { SRLWrapper } from "simple-react-lightbox";
+import { CloudinaryContext, Image, Transformation } from "cloudinary-react";
+import photoList from "../assets/photoList.json";
 
-const Gallery = () => {
-  // State
-  const [toggle, setToggle] = React.useState(false);
-  const [sIndex, setSIndex] = React.useState(0);
-
-  // Handler
-  const lightBoxHandler = (state, sIndex) => {
-    setToggle(state);
-    setSIndex(sIndex);
-  };
-
-  return (
-    <div>
-      // data should be an array of object
-      {data.map((item, index) => (
-        <>
-          <img
-            key={item.id}
-            src={item.image}
-            alt={item.title}
-            style={{ maxHeight: "80vh", maxWidth: "50vw" }}
-            onClick={() => {
-              lightBoxHandler(true, index);
-            }}
-          />
-        </>
-      ))}
-      //Component
-      <LightBox
-        state={toggle}
-        event={lightBoxHandler}
-        data={data}
-        imageWidth='60vw'
-        imageHeight='70vh'
-        thumbnailHeight={50}
-        thumbnailWidth={50}
-        setImageIndex={setSIndex}
-        imageIndex={sIndex}
-      />
-    </div>
-  );
+const galleryContainer = {
+  paddingTop: "100px",
 };
+
+function Gallery() {
+  photoList.resources.forEach((element) => {
+    // there is a json file that has all the secure urls for all the photos on cloudinary, i'm trying to turn that into a bunch of elements like the ones below
+  });
+  return (
+    <Container style={galleryContainer}>
+      <SRLWrapper>
+        {/* This will be your content with the images. It can be anything. Content defined by
+      yourself, content fetched from an API, data from a graphQL query... */}
+        <a href='https://res.cloudinary.com/milliegrey/image/upload/v1635499384/My%20Photos/Rori_disney_princess.jpg'>
+          <img
+            src='https://res.cloudinary.com/milliegrey/image/upload/v1635499384/My%20Photos/Rori_disney_princess.jpg'
+            alt='yes'
+            width='300rem'
+          />
+        </a>
+        <a href='https://res.cloudinary.com/milliegrey/image/upload/v1635499384/My%20Photos/Fall_Rori-235-200925_a8emsp.jpg'>
+          <img
+            src='https://res.cloudinary.com/milliegrey/image/upload/v1635499384/My%20Photos/Fall_Rori-235-200925_a8emsp.jpg'
+            alt='no'
+            width='300rem'
+          />
+        </a>
+        {/* <CloudinaryContext cloudName='milliegrey'>
+          <Image publicId='My%20Photos/Rori_disney_princess.jpg' width='200rem' />
+          <Image publicId='My%20Photos/Fall_Rori-235-200925_a8emsp.jpg' width='200rem' />
+        </CloudinaryContext> */}
+      </SRLWrapper>
+    </Container>
+  );
+}
 export default Gallery;
