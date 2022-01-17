@@ -1,5 +1,8 @@
 TODOs
 
+gallery:
+ - switching to lighroom hosting for galleries
+
 About Page:
  - Change into team Page
  - Navbar etc
@@ -7,4 +10,4 @@ About Page:
 
 API Calls:
  - find way to have static url for dynamic images
-    - embedded github? 
+    - embedded github? (what does that mean?)
