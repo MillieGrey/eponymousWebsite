@@ -70,7 +70,13 @@ export default function Footer() {
 
       <p style={navLinkTextStyle}> | </p>
 
-      <Nav.Link href='' style={navLinkTextStyle} className='navLinkTextStyle'>
+      <Nav.Link
+        href='/gallery'
+        as={Link}
+        to='/gallery'
+        style={navLinkTextStyle}
+        className='navLinkTextStyle'
+      >
         Gallery
       </Nav.Link>
 

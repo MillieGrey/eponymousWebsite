@@ -39,4 +39,3 @@ function Gallery() {
     </Container>
   );
 }
-export default Gallery;
